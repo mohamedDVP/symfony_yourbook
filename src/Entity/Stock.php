@@ -16,6 +16,11 @@ class Stock
     #[ORM\Column(length: 255)]
     private ?string $emplacement = null;
 
+    public function __toString()
+    {
+        return $this->getEmplacement();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

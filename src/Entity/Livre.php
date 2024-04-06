@@ -44,6 +44,11 @@ class Livre
         $this->genres = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->getTitre().' - '.$this->getAuteur().' - '.$this->getEditeur();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -109,12 +114,12 @@ class Livre
         return $this;
     }
 
-    public function getEditeurId(): ?Editeur
+    public function getEditeur(): ?Editeur
     {
         return $this->editeur;
     }
 
-    public function setEditeurId(?Editeur $editeur): static
+    public function setEditeur(?Editeur $editeur): static
     {
         $this->editeur = $editeur;
 
