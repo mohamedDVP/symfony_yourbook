@@ -32,7 +32,7 @@ class Emprunt
     #[ORM\Column]
     private ?bool $statut = null;
 
-    private ?\DateTimeInterface $date_previsionnelle = null;
+    //private ?\DateTimeInterface $date_previsionnelle = null;
 
 
     public function getId(): ?int
